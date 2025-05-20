@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro de Eventos</title>
+    <title>Registro de Ponto Digital</title>
     <style>
         :root {
             --primary: #25D366;
@@ -175,8 +175,8 @@
 <body>
     <div class="container">
         <header>
-            <h1>Registro de Eventos</h1>
-            <p>Registre momentos importantes com notificação via WhatsApp</p>
+            <h1>Registro de Ponto Digital</h1>
+            <p>Registre sua jornada de trabalho com facilidade</p>
         </header>
         
         <div class="card">
@@ -267,7 +267,7 @@
                 sendWhatsAppMessage(registro);
                 
                 // Mostra mensagem de sucesso
-                showStatus(`Evento registrado com sucesso: ${getTipoDescricao(tipo)}`, 'success');
+                showStatus(`Ponto registrado com sucesso: ${getTipoDescricao(tipo)}`, 'success');
                 
                 // Limpa campos
                 eventoInput.value = '';
@@ -319,7 +319,7 @@
             // Função para enviar mensagem via WhatsApp
             function sendWhatsAppMessage(registro) {
                 const phoneNumber = '5541988272932';
-                const message = `Registro de Evento%0A%0A${registro.evento}%0ATipo: ${getTipoDescricao(registro.tipo)}%0AData/Hora: ${registro.dataHora}`;
+                const message = `Registro de Ponto Digital%0A%0A${registro.evento}%0ATipo: ${getTipoDescricao(registro.tipo)}%0AData/Hora: ${registro.dataHora}`;
                 
                 const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
                 
